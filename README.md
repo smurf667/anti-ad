@@ -4,7 +4,7 @@ This is just the source, as getting this installable requires publishing via Moz
 
 The add-on can be activated using `about:debugging` by loading it manually via "Load Temporary Add-on...". Open the project folder and load the `manifest.json` file.
 
-A "campfire" icon will be shown in the menu bar. Clicking it on a website it knows how to handle, the "Ad blocking detected" message will be removed.
+A "campfire" icon will be shown in the menu bar. Clicking it on a website registered with the add-on, removes the "Ad blocking detected" message.
 
 The removal code can be found in [`remove-message.js`](remove-message.js). For each website - matched via a regular expression - a handler can be registered. Example:
 
