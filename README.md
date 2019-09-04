@@ -2,7 +2,7 @@
 
 This is just the source, as getting this installable requires publishing via Mozilla, which I am not prepared to do at this time.
 
-The add-on can be activated using `about:debugging` by loading it manually via "Load Temporary Add-on...". Open the project folder and load the `manifest.json` file.
+The add-on can be activated using `about:debugging#/runtime/this-firefox` by loading it manually via "Load Temporary Add-on...". Open the project folder and load the `manifest.json` file.
 
 A "campfire" icon will be shown in the menu bar. Clicking it on a website registered with the add-on, removes the "Ad blocking detected" message.
 
