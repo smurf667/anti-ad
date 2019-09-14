@@ -56,6 +56,22 @@ var handlers = [{
       }
       document.body.setAttribute("class", "");
     }
+  },
+  {
+    regexp: new RegExp('http(s?):\/\/.+20min\.ch\/.*'),
+    remover: function() {
+      document.querySelector('[class^=sp_veil]').remove();
+      document.querySelector('[class^=sp_message]').remove();
+	  document.body.style.height = 'auto';
+      document.body.style['overflow-y'] = 'scroll';
+      [].forEach.call(
+        document.querySelectorAll('*'),
+        function(element) {
+          element.style.height = 'auto';
+          element.style.overflow = '';
+        }
+      );
+    }
   }
 ]
 
