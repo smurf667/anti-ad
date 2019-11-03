@@ -23,10 +23,18 @@ var handlers = [{
   {
     regexp: new RegExp('http(s?):\/\/.+tagesanzeiger\.ch\/.*'),
     remover: function() {
-      document.querySelector("[id*='unverified']").style = 'display: none';
-      var x = document.getElementsByTagName('style');
+	  var elem = document.querySelector('#tamovl-main-container');
+	  if (elem) {
+        elem.style = 'display: none';
+	  }
+      elem = document.querySelector("[id*='unverified']");
+	  if (elem) {
+        elem.style = 'display: none';
+	  }
+	  var x = document.getElementsByTagName('style');
       for (i = 0; i < x.length; i++) {
-        if (x[i].innerText.indexOf('diamond') > 0) {
+		const txt = x[i].innerText;
+        if (txt && (txt.indexOf('diamond') > 0 || txt.indexOf('tamovl') > 0)) {
           x[i].remove();
         }
       }
