@@ -80,6 +80,19 @@ var handlers = [{
         }
       );
     }
+  },
+  {
+    regexp: new RegExp('http(s?):\/\/.+derstandard\.at\/.*'),
+    remover: function() {
+      document.querySelector('[class^=sp_veil]').remove();
+      document.querySelector('[class^=sp_message]').remove();
+	  document.body.style.height = 'auto';
+      document.body.style['overflow-y'] = 'scroll';
+      const bad = 'sp-message-open';
+      for (let i of document.getElementsByClassName(bad)) {
+        i.classList.remove(bad);
+      }
+    }
   }
 ]
 
