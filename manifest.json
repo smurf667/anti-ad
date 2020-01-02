@@ -1,9 +1,10 @@
 {
 
-  "description": "Kill known adblock messages",
+  "description": "Remove known adblock messages by manual intervention",
   "manifest_version": 2,
   "name": "anti-ad",
   "version": "1.0",
+  "homepage_url": "https://github.com/smurf667/anti-ad",
 
   "permissions": [
     "activeTab"

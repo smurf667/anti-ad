@@ -1,8 +1,7 @@
 `anti-ad` is a **Firefox** add-on that removes "Ad blocking detected" messages from HTML pages. Some websites overlay their message in a way that after removing them the original content can be viewed.
 
-This is just the source, as getting this installable requires publishing via Mozilla, which I am not prepared to do at this time.
-
 The add-on can be activated using `about:debugging#/runtime/this-firefox` by loading it manually via "Load Temporary Add-on...". Open the project folder and load the `manifest.json` file.
+Check https://github.com/smurf667/anti-ad/releases for pre-built `.xpi` versions of the add-on.
 
 A "campfire" icon will be shown in the menu bar. Clicking it on a website registered with the add-on, removes the "Ad blocking detected" message.
 
