@@ -23,8 +23,15 @@ var handlers = [{
   {
     regexp: new RegExp('http(s?):\/\/.+tagesanzeiger\.ch\/.*'),
     remover: function() {
-	  var elem = document.querySelector('#tamovl-main-container');
-	  if (elem) {
+      for (selector of ['.o-overlay', '.a-backdrop']) {
+        const elem = document.querySelector(selector);
+        if (elem) {
+          elem.remove();
+        }
+      }
+      document.body.classList.remove('h-disable-scroll');
+      var elem = document.querySelector('#tamovl-main-container');
+      if (elem) {
         elem.style = 'display: none';
 	  }
       elem = document.querySelector("[id*='unverified']");
@@ -38,6 +45,7 @@ var handlers = [{
           x[i].remove();
         }
       }
+	  
     }
   },
   {
